@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".inicioJuego">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/tab0"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab1"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab2"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab3"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/tab4"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab5"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab6"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab7"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/tab8"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab9"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab10"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab11"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/tab12"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab13"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab14"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab15"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/tab16"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab17"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab18"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab19"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/tab20"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab21"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab22"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+            <ImageView
+                android:id="@+id/tab23"
+                android:layout_width="79dp"
+                android:layout_height="83dp"
+                app:srcCompat="@drawable/p_anthony" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/preguntar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preguntar"
+        app:backgroundTint="#0047ff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resolver"
+        app:backgroundTint="#0047ff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/pruba"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.19999999" />
+</androidx.constraintlayout.widget.ConstraintLayout>
