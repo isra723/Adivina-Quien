@@ -9,11 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AdivinaQuien">
-        <activity android:name=".inicioJuego"></activity>
-        <activity android:name=".GameSingle" />
-        <activity android:name=".activityStats" />
-        <activity android:name=".tipoJuego" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".inicioJuego"
+            android:exported="true"/>
+        <activity android:name=".GameSingle"
+            android:exported="true"/>
+        <activity android:name=".activityStats"
+            android:exported="true"/>
+        <activity android:name=".tipoJuego"
+            android:exported="true"/>
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

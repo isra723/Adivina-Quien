@@ -4,14 +4,179 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
+import com.github.clans.fab.FloatingActionButton
 
 class inicioJuego : AppCompatActivity() {
+    private lateinit var Img0: ImageView
+    private lateinit var Img1: ImageView
+    private lateinit var Img2: ImageView
+    private lateinit var Img3: ImageView
+    private lateinit var Img4: ImageView
+    private lateinit var Img5: ImageView
+    private lateinit var Img6: ImageView
+    private lateinit var Img7: ImageView
+    private lateinit var Img8: ImageView
+    private lateinit var Img9: ImageView
+    private lateinit var Img10: ImageView
+    private lateinit var Img11: ImageView
+    private lateinit var Img12: ImageView
+    private lateinit var Img13: ImageView
+    private lateinit var Img15: ImageView
+    private lateinit var Img14: ImageView
+    private lateinit var Img16: ImageView
+    private lateinit var Img17: ImageView
+    private lateinit var Img18: ImageView
+    private lateinit var Img19: ImageView
+    private lateinit var Img20: ImageView
+    private lateinit var Img21: ImageView
+    private lateinit var Img22: ImageView
+    private lateinit var Img23: ImageView
+
+    val ready: ArrayList<Int> = ArrayList()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio_juego)
-        //val txt: TextView = findViewById(R.id.texto)
-        val Img1: ImageView = findViewById(R.id.tab0)
+
+        Img0 = findViewById(R.id.tab0)
+        Img1 = findViewById(R.id.tab1)
+        Img2 = findViewById(R.id.tab2)
+        Img3 = findViewById(R.id.tab3)
+        Img4 = findViewById(R.id.tab4)
+        Img5 = findViewById(R.id.tab5)
+        Img6 = findViewById(R.id.tab6)
+        Img7 = findViewById(R.id.tab7)
+        Img8 = findViewById(R.id.tab8)
+        Img9 = findViewById(R.id.tab9)
+        Img10 = findViewById(R.id.tab10)
+        Img11 = findViewById(R.id.tab11)
+        Img12 = findViewById(R.id.tab12)
+        Img13 = findViewById(R.id.tab13)
+        Img14 = findViewById(R.id.tab14)
+        Img15 = findViewById(R.id.tab15)
+        Img16 = findViewById(R.id.tab16)
+        Img17 = findViewById(R.id.tab17)
+        Img18 = findViewById(R.id.tab18)
+        Img19 = findViewById(R.id.tab19)
+        Img20 = findViewById(R.id.tab20)
+        Img21 = findViewById(R.id.tab21)
+        Img22 = findViewById(R.id.tab22)
+        Img23 = findViewById(R.id.tab23)
+
+        val personaje =intent.getStringExtra("Personaje")
+        var deck = CharService()
+
+        if (personaje != null) {
+            deck.setSinglePlayerCharacter(personaje)
+        }
+        println("adivinamesta: "+personaje)
+
+        val btnCabelloMarron: FloatingActionButton =findViewById(R.id.btnCabelloMarron)
+        val btnCabelloNegro: FloatingActionButton =findViewById(R.id.btnCabelloNegro)
+        val btnCabelloAmarillo: FloatingActionButton =findViewById(R.id.btnCabelloAmarillo)
+        val btnCabelloNaranja: FloatingActionButton =findViewById(R.id.btnCabelloNaranja)
+        val btnCabelloCalvo: FloatingActionButton =findViewById(R.id.btnCabelloCalvo)
+
+        val btnOjosMarron: FloatingActionButton =findViewById(R.id.btnOjosMarron)
+        val btnOjosVerde: FloatingActionButton =findViewById(R.id.btnOjosVerde)
+        val btnOjosAzul: FloatingActionButton =findViewById(R.id.btnOjosAzul)
+
+        val btnAccesoriosGafas: FloatingActionButton =findViewById(R.id.btnAccGafas)
+        val btnAccesoriosPendientes: FloatingActionButton =findViewById(R.id.btnAccPendientes)
+        val btnAccesoriosCabello: FloatingActionButton =findViewById(R.id.btnAccPelo)
+        val btnAccesoriosGorra: FloatingActionButton =findViewById(R.id.btnAccGorra)
+
+        val btnOtherBarba: FloatingActionButton =findViewById(R.id.btnOtherBarba)
+        val btnOtherBigote: FloatingActionButton =findViewById(R.id.btnOtherBigote)
+        val btnOtherMorena: FloatingActionButton =findViewById(R.id.btnOtherPielMorena)
+        val btnOtherClara: FloatingActionButton =findViewById(R.id.btnOtherPielClara)
+
+        window.decorView.apply {
+            systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN
+            systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
+            actionBar?.hide()
+        }
+
+        var arrayReady =deck.getRemoveArray()
+
+        this.getCharactersPosition()
+
+        //----------------------
+        btnCabelloMarron.setOnClickListener {
+            deck.turn("pelos", "Marron")
+            var arrayReady = deck.getRemoveArray()
+            removeCharacters(arrayReady)
+        }
+        btnCabelloNegro.setOnClickListener {
+            deck.turn("pelos", "Negro")
+            var arrayReady =deck.getRemoveArray()
+            removeCharacters(arrayReady)
+        }
+        btnCabelloAmarillo.setOnClickListener {
+            deck.turn("pelos", "Amarillo")
+            var arrayReady =deck.getRemoveArray()
+            removeCharacters(arrayReady)
+        }
+        btnCabelloNaranja.setOnClickListener {
+            deck.turn("pelos", "Naranja")
+            var arrayReady =deck.getRemoveArray()
+            removeCharacters(arrayReady)
+        }
+        btnCabelloCalvo.setOnClickListener {
+            deck.turn("pelos", "Calvo")
+            var arrayReady =deck.getRemoveArray()
+            removeCharacters(arrayReady)
+        }
+        btnOjosMarron.setOnClickListener {
+            deck.turn("ojos", "Marron")
+            var arrayReady =deck.getRemoveArray()
+        }
+        btnOjosVerde.setOnClickListener {
+            deck.turn("ojos", "Verde")
+            var arrayReady =deck.getRemoveArray()
+        }
+        btnOjosAzul.setOnClickListener {
+            deck.turn("ojos", "Azul")
+            var arrayReady =deck.getRemoveArray()
+        }
+        btnAccesoriosGafas.setOnClickListener {
+            deck.turn("accesorios", "Gafas")
+            var arrayReady =deck.getRemoveArray()
+        }
+        btnAccesoriosCabello.setOnClickListener {
+            deck.turn("accesorios", "Accesorio pelo")
+            var arrayReady =deck.getRemoveArray()
+        }
+        btnAccesoriosPendientes.setOnClickListener {
+            deck.turn("accesorios", "Pendientes")
+            var arrayReady =deck.getRemoveArray()
+        }
+        btnAccesoriosGorra.setOnClickListener {
+            deck.turn("accesorios", "Gorra")
+            var arrayReady =deck.getRemoveArray()
+        }
+        btnOtherBarba.setOnClickListener {
+            deck.turn("otros", "Barba")
+            var arrayReady =deck.getRemoveArray()
+        }
+        btnOtherBigote.setOnClickListener {
+            deck.turn("otros", "Bigote")
+            var arrayReady =deck.getRemoveArray()
+        }
+        btnOtherMorena.setOnClickListener {
+            deck.turn("otros", "Obscura")
+            var arrayReady =deck.getRemoveArray()
+        }
+        btnOtherClara.setOnClickListener {
+            deck.turn("otros", "Clara")
+            var arrayReady =deck.getRemoveArray()
+        }
+
+    }
+
+
+    private fun getCharactersPosition() {
+/*        val Img1: ImageView = findViewById(R.id.tab0)
         val Img2: ImageView = findViewById(R.id.tab1)
         val Img3: ImageView = findViewById(R.id.tab2)
         val Img4: ImageView = findViewById(R.id.tab3)
@@ -35,19 +200,11 @@ class inicioJuego : AppCompatActivity() {
         val Img22: ImageView = findViewById(R.id.tab21)
         val Img23: ImageView = findViewById(R.id.tab22)
         val Img24: ImageView = findViewById(R.id.tab23)
-        val txt: TextView = findViewById(R.id.pruba)
-        window.decorView.apply {
-            systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN
-            systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-            actionBar?.hide()
-        }
 
-        val personaje =intent.getStringExtra("Personaje")
+ */
 
-        val pers = arrayOf("p_abigail","p_alexander","p_anna","p_anthony","p_benjamin","p_campbell","p_charles","p_david","p_emma","p_ethan","p_jacob","p_jerry","p_laura","p_linda","p_lisa","p_madison","p_maria","p_martin","p_rachel","p_richard","p_roy","p_scott","p_sophia","p_tiffany")
-        val ready: ArrayList<Int> = ArrayList()
+        //val ready: ArrayList<Int> = ArrayList()
         for (i in 0..23){
-
             do{
                 var flag = true
                 var rand = (0..23).random()
@@ -65,7 +222,7 @@ class inicioJuego : AppCompatActivity() {
 
         do {
             when(countDeck) {
-                0 -> setImage(countDeck, ready, Img24)
+                0 -> setImage(countDeck, ready, Img0)
                 1 -> setImage(countDeck, ready, Img1)
                 2 -> setImage(countDeck, ready, Img2)
                 3 -> setImage(countDeck, ready, Img3)
@@ -92,7 +249,6 @@ class inicioJuego : AppCompatActivity() {
             }
             countDeck++
         } while(countDeck < 24)
-
     }
 
     private fun setImage(x: Int, ready: ArrayList<Int>, Img: ImageView) {
@@ -122,5 +278,57 @@ class inicioJuego : AppCompatActivity() {
             22 -> Img.setImageResource(R.drawable.p_scott)
             23 -> Img.setImageResource(R.drawable.p_sophia)
         }
+
+        println(ready)
     }
+
+    private fun removeCharacters(removed: MutableList<Int>) {
+        println(removed)
+
+        for(i in removed) {
+            //var auxPosition = removed.indexOf(ready[i])
+            //println(auxPosition)
+            var count = 0
+            var auxPosition = 0
+            do{
+                if(removed[count] == ready[count]){
+                    auxPosition = count
+                }
+                count++
+            }while(count < removed.size)
+
+            when(auxPosition) {
+                0 -> Img0.setImageResource(R.drawable.bkg)
+                1 -> Img1.setImageResource(R.drawable.bkg)
+                2 -> Img2.setImageResource(R.drawable.bkg)
+                3 -> Img3.setImageResource(R.drawable.bkg)
+                4 -> Img4.setImageResource(R.drawable.bkg)
+                5 -> Img5.setImageResource(R.drawable.bkg)
+                6 -> Img6.setImageResource(R.drawable.bkg)
+                7 -> Img7.setImageResource(R.drawable.bkg)
+                8 -> Img8.setImageResource(R.drawable.bkg)
+                9 -> Img9.setImageResource(R.drawable.bkg)
+                10 -> Img10.setImageResource(R.drawable.bkg)
+                11 -> Img11.setImageResource(R.drawable.bkg)
+                12 -> Img12.setImageResource(R.drawable.bkg)
+                13 -> Img13.setImageResource(R.drawable.bkg)
+                14 -> Img14.setImageResource(R.drawable.bkg)
+                15 -> Img15.setImageResource(R.drawable.bkg)
+                16 -> Img16.setImageResource(R.drawable.bkg)
+                17 -> Img17.setImageResource(R.drawable.bkg)
+                18 -> Img18.setImageResource(R.drawable.bkg)
+                19 -> Img19.setImageResource(R.drawable.bkg)
+                20 -> Img20.setImageResource(R.drawable.bkg)
+                21 -> Img21.setImageResource(R.drawable.bkg)
+                22 -> Img22.setImageResource(R.drawable.bkg)
+                23 -> Img23.setImageResource(R.drawable.bkg)
+            }
+        }
+    }
+}
+
+enum class CharactersOrder {
+    Tiffany, Abigail, Alexander, Anna, Anthony, Benjamin, Campbell, Charles, David, Emma,
+    Ethan, Jacob, Jerry, Laura, Linda, Lisa, Madison, Maria, Martin, Rachel, Richard, Roy,
+    Scott, Sophia
 }
