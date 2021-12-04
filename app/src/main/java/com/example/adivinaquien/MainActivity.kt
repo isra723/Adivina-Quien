@@ -6,7 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
+
+
 class MainActivity : AppCompatActivity() {
+    private var puntuacionResetGet = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,7 +23,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnStats.setOnClickListener{
-            //startActivity(Intent(this, activityStats::class.java))
+
+                startActivity(Intent(this, activityStats::class.java))
+
         }
     }
 } 

@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/Multi_game"
-        android:layout_width="319dp"
-        android:layout_height="75dp"
+        android:layout_width="352dp"
+        android:layout_height="68dp"
         android:text="Multijugador"
         android:textSize="36sp"
         app:backgroundTint="#0047ff"

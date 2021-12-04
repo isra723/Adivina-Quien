@@ -553,22 +553,22 @@ class inicioJuego : AppCompatActivity() {
         var Puntaje = Puntaje()
         println("Ganaste chepe")
         Puntaje.setValues(countTurnos, array.size)
+
         val totalPuntos = Puntaje.getPuntaje()
-        println("xxx> " + totalPuntos)
-        startActivity(Intent(this, ganaste::class.java))
 
+        val puntuacion = Intent(this, ganaste::class.java)
+        puntuacion.putExtra("Puntuacion", totalPuntos)
 
+        var getNombre = ""
+        if(intent.getSerializableExtra("Nombre") != null) {
+            getNombre = intent.getSerializableExtra("Nombre") as String
+        }
+        puntuacion.putExtra("Nombre", getNombre)
+        startActivity(puntuacion)
     }
 
     private fun mamo(array: MutableList<Int>) {
-        var Puntaje = Puntaje()
-
-        println("No ganaste chepe")
-        Puntaje.setValues(countTurnos, array.size)
-        val totalPuntos = Puntaje.getPuntaje()
-        println("xxx> " + totalPuntos)
         startActivity(Intent(this, loser::class.java))
-
     }
 
     private fun getCharactersPosition() {

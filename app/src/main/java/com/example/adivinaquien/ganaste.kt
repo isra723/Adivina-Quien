@@ -9,11 +9,30 @@ class ganaste : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_winner)
-
         val menu: Button =findViewById(R.id.btnMenu)
 
+        var puntuacionGet = intent.getSerializableExtra("Puntuacion") as Int
+        println("xxx>---------------------------ganaste " + puntuacionGet )
+        val puntuacion = Intent(this, activityStats::class.java)
+        //puntuacion.putExtra("Puntuacion", puntuacionGet)
+
+        //var getNombre =""
+        //if(intent.getSerializableExtra("Personaje") != null){
+          val  getNombre: String = intent.getStringExtra("Nombre") as String
+        //}
+
+
+
+        println("xxx>---------------------------inicio juego " + getNombre )
+
+
+
         menu.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            puntuacion.putExtra("Nombre", getNombre)
+            puntuacion.putExtra("Puntuacion", puntuacionGet)
+            startActivity(puntuacion)
         }
+
+
     }
 }

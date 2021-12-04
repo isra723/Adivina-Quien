@@ -33,7 +33,7 @@ class CharService {
         Character("Rachel", "Marron", "Verde", arrayOf<String>("Gorra"), arrayOf<String>("Obscura"),19), // 19
         Character("Richard", "Negro", "Verde", arrayOf<String>(), arrayOf<String>("Clara", "Barba"),20), // 20
         Character("Roy", "Negro", "Marron", arrayOf<String>("Gafas"), arrayOf<String>("Obscura"),21), // 21
-        Character("Scott", "Negro", "Verde", arrayOf<String>(), arrayOf<String>("Obscura", "Bigote"),22), // 22
+        Character("Scott", "Negro", "Marron", arrayOf<String>(), arrayOf<String>("Obscura", "Bigote"),22), // 22
         Character("Sophia", "Marron", "Azul", arrayOf<String>("Accesorio pelo", "Pendientes"), arrayOf<String>("Clara"),23), // 23
         Character("Tiffany", "Negro", "Marron", arrayOf<String>("Accesorio pelo"), arrayOf<String>("Clara"),0), // 0
     )
