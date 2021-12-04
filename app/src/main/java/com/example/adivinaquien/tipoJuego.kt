@@ -18,7 +18,7 @@ class tipoJuego : AppCompatActivity() {
         }
 
         btnMulti.setOnClickListener{
-            //startActivity(Intent(this, GameMulti::class.java))
+            startActivity(Intent(this, multigame::class.java))
 
         }
     }

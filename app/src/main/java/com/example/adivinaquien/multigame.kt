@@ -10,14 +10,14 @@ import android.widget.LinearLayout
 class multigame : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game_single)
+        setContentView(R.layout.activity_multigame)
 
         val Img: ImageView = findViewById(R.id.showImg)
         val btnContin: Button = findViewById(R.id.btnEmpezar)
         val rnds = (1..24).random()
         //val pers = arrayOf("","","","","","","","","","","","","","","","","","","","","","","","")
         //val personaje = pers.get(rnds)
-        val i = Intent(this, inicioJuego::class.java)
+        val i = Intent(this, inicioJuegoMulti::class.java)
 
         when(rnds){
             1 -> {Img.setImageResource(R.drawable.p_abigail)
