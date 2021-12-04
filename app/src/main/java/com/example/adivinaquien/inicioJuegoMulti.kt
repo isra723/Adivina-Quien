@@ -80,7 +80,7 @@ class inicioJuegoMulti : AppCompatActivity() {
             deck.setSinglePlayerCharacter(personaje)
         }
 
-        
+
 
         window.decorView.apply {
             systemUiVisibility =

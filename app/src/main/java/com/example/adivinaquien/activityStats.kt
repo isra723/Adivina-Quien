@@ -42,11 +42,17 @@ class activityStats : AppCompatActivity() {
 
         val db = dbHelper.writableDatabase
 
-        val values = ContentValues().apply {
+
+        if(getNombre != "" && puntuacion != 0){
+            val values = ContentValues().apply {
                 put(SQLiteEjemploContract.Tabla1.COLUMN_1, "Jugador: ${getNombre}")
                 put(SQLiteEjemploContract.Tabla1.COLUMN_2, "Puntuacion: ${puntuacion}")
+
+            }
+            db?.insert(SQLiteEjemploContract.Tabla1.TABLE_NAME, null, values)
         }
-        db?.insert(SQLiteEjemploContract.Tabla1.TABLE_NAME, null, values)
+
+
         actualizarLista(adaptador, datos, dbHelper)
 
         btnMenu.setOnClickListener {
